@@ -7,15 +7,20 @@
 Add these lines in your build.gradle files:
 ##### In your Project Level build.gradle
 ```gradle
-repositories {
-        jcenter()
+allprojects {
+  repositories {
+    google()
+    jcenter()
+    maven { url 'https://jitpack.io' } <-- Add this line
+  }
 }
+
 ```
 ##### In your App Level build.gradle
 
 ```gradle
 dependencies {
-    compile 'com.dynamitechetan.flowinggradient:flowinggradient:1.1'
+  implementation 'com.github.Joran-Dob:Flowing-Gradient:65c885ba02'
 }
 ```
 
@@ -107,7 +112,7 @@ Making a Gradient in Android
 ```
 ####You are requested to use the methods in this order or sometimes it can end up in a null pointer exception.
 ```java
-.onReltiveLayout() and be replaced by .onImageView() or .onLinearLayout()  as per use.
+.onReltiveLayout() and be replaced by .onImageView(), .onLinearLayout(), .onConstraintsLayout()  as per use.
 ```
 
 ## To set Alpha of the transition
@@ -122,6 +127,6 @@ Making a Gradient in Android
 ```
 
 ## License
+Modifications Copyright (c) 2018 Joran Dob 
 Copyright (c) 2016 Chetan Kaushik
-
 Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
