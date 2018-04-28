@@ -73,6 +73,11 @@ public class FlowingGradientClass {
     return this;
   }
 
+  public FlowingGradientClass stop() {
+    frameAnimation.stop();
+    return this;
+  }
+
   public FlowingGradientClass setBackgroundResource(int resourceId) {
     this.resourceId = resourceId;
     return this;
